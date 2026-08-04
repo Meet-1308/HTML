@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <h1>lab2.1</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, <em>adipisicing</em> elit. <strong>cupiditate,</strong>  officia consectetur laborum vitae quibusdam possimus doloremque fuga aperiam mollitia impedit obcaecati nam quidem at nihil tempora nobis esse quaerat?<br></p>
+    <p>Lorem  dolor sit amet consectetur <i>adipisicing</i>  elit.<b>ommodi eius</b>, C, libero, <u>ratione pariatur ducimus ab minima perspiciatis rerum adipisci nulla delectus eos. Ipsam suscipit non officiis eveniet labore odio praesentium.</u></p>
+
+
+    <h1>lab2.2</h1>
+    <h3><i>H<sub>2</sub>0</sub></i></h3>
+    <h3><i>X<sup>2</sup>+ 1</i>
+
+    <h1>lab2.3</h1>
+    <pre>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet quod harum est sint aut quidem quo nam culpa incidunt autem, iusto dicta magnam dolorem corrupti consectetur repudiandae. Nobis, omnis tempore?</pre>
+    <pre>ipsum dolor sit amet consectetur adipisicing elit. Repudiandae dolores impedit eum vero deserunt mollitia natus magni velit nam, ducimus vel, asperiores illum id sunt molestias excepturi, harum beatae. Perspiciatis.</pre>
+
+    <code>
+        #include <stdio.h>
+
+int main()
+{
+    int num, temp, duck = 0;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    temp = num;
+
+    while (temp > 0)
+    {
+        if (temp % 10 == 0)
+        {
+            duck = 1;
+            break;
+        }
+        temp = temp / 10;
+    }
+
+    if (duck)
+        printf("Duck Number");
+    else
+        printf("Not a Duck Number");
+
+    return 0;
+}
+    </code>
+</body>
+</html>
