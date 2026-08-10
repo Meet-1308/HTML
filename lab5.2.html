@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>COVID-19 Vaccine Registration Form</title>
+</head>
+
+<body>
+
+<form>
+
+<h1>COVID-19 Vaccine Registration Form</h1>
+
+<table>
+
+<tr>
+    <td>First Name</td>
+    <td>
+        <input type="text"
+               name="fname"
+               pattern="[A-Za-z]{2,30}"
+               required>
+    </td>
+</tr>
+
+<tr>
+    <td>Last Name</td>
+    <td>
+        <input type="text"
+               name="lname"
+               pattern="[A-Za-z]{2,30}"
+               required>
+    </td>
+</tr>
+
+<tr>
+    <td>Aadhar Number</td>
+    <td>
+        <input type="text"
+               name="aadhar"
+               pattern="[0-9]{12}"
+               maxlength="12"
+               required>
+    </td>
+</tr>
+
+<tr>
+    <td>Vaccine Name</td>
+    <td>
+        <select name="vaccine" required>
+            <option value="">Please Select Vaccine Name</option>
+            <option>Covishield</option>
+            <option>Covaxin</option>
+            <option>Sputnik V</option>
+        </select>
+    </td>
+</tr>
+
+<tr>
+    <td>Vaccination Center Name</td>
+    <td>
+        <select name="center" required>
+            <option value="">Please Select Vaccination Center Name</option>
+            <option>Government Hospital</option>
+            <option>City Hospital</option>
+            <option>Civil Hospital</option>
+        </select>
+    </td>
+</tr>
+
+<tr>
+    <td>Date of Dose</td>
+    <td>
+        <input type="date"
+               name="dose_date"
+               required>
+    </td>
+</tr>
+
+<tr>
+    <td>Dose Number</td>
+    <td>
+        <input type="number"
+               name="dose"
+               min="1"
+               max="4"
+               required>
+    </td>
+</tr>
+
+<tr>
+    <td></td>
+    <td>
+        <input type="submit" value="CLICK HERE">
+        <input type="reset" value="CANCEL">
+    </td>
+</tr>
+
+</table>
+
+</form>
+
+</body>
+</html>
