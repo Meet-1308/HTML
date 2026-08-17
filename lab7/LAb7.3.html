@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Combinator & Attribute Selectors</title>
+  <style>
+    ul > li {
+      color: #27ae60;
+      font-weight: bold;
+      list-style-type: square;
+    }
+    h2 + p {
+      background-color: #e8f8f5;
+      padding: 10px;
+      border-left: 4px solid #1abc9c;
+    }
+    input[type="text"] {
+      border: 2px solid #3498db;
+      padding: 8px;
+      border-radius: 4px;
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+  <h2>Section Title</h2>
+  <p>Adjacent sibling paragraph (h2 + p) immediately following the h2.</p>
+  <p>Normal paragraph — not targeted by adjacent sibling selector.</p>
+
+  <ul>
+    <li>Direct Child 1 (ul > li)</li>
+    <li>
+      Direct Child 2
+      <ol>
+        <li>Nested item inside ol (ignored by ul > li)</li>
+      </ol>
+    </li>
+  </ul>
+
+  <br>
+  <label for="username">User Input:</label>
+  <input type="text" id="username" placeholder="Styled via input[type='text']">
+  <input type="button" value="Unstyled Button">
+</body>
+</html>
