@@ -1,0 +1,82 @@
+/* =======================================================
+   Movie Catalog Stylesheet (movies.html)
+   Subject: Web Technology-I (HTML5 & CSS3)
+   This file contains styles specific to the Movies page:
+   - Catalog Header & Results Badge
+   - Search Toolbar & Input Box
+   - Responsive Media Queries
+   ======================================================= */
+
+/* Catalog Header */
+.catalog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+  gap: 15px;
+  width: 100%;
+}
+
+.results-badge {
+  background-color: #e50914;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+/* Search Toolbar Box */
+.search-toolbar,
+.filter-toolbar {
+  background-color: #171a21;
+  border: 1px solid #2e3442;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.search-form {
+  width: 100%;
+}
+
+.search-input-group {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  width: 100%;
+}
+
+.search-input-group .form-input {
+  flex: 1;
+}
+
+.search-btn {
+  padding: 10px 24px;
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .catalog-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .search-toolbar,
+  .filter-toolbar {
+    padding: 15px;
+  }
+  .search-input-group {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  .search-btn {
+    width: 100%;
+  }
+}

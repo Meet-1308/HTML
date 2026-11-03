@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CinePulse - Movie Information Portal | Phase-1 Static UI</title>
+  
+  <!-- Font Awesome 6.5.1 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Pure CSS Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+  <!-- Navigation Bar (Pure HTML5 & CSS3) -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a class="navbar-brand" href="index.html">
+        <span class="brand-icon">
+          <i class="fa-solid fa-film"></i>
+        </span>
+        <span>Cine<span class="text-red">Pulse</span></span>
+      </a>
+
+      <nav>
+        <ul class="nav-menu">
+          <li>
+            <a class="nav-link active" href="index.html">
+              <i class="fa-solid fa-house"></i>
+              Home
+            </a>
+          </li>
+          <li>
+            <a class="nav-link" href="movies.html">
+              <i class="fa-solid fa-film"></i>
+              Movies
+            </a>
+          </li>
+          <li>
+            <a class="nav-link" href="favorites.html">
+              <i class="fa-solid fa-heart"></i>
+              Favorites
+              <span class="nav-badge">4</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link" href="reviews.html">
+              <i class="fa-solid fa-star"></i>
+              Reviews
+            </a>
+          </li>
+          <li>
+            <a class="nav-link" href="contact.html">
+              <i class="fa-solid fa-envelope"></i>
+              Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="container">
+
+      <!-- Hero Banner -->
+      <section class="hero-banner">
+        <div class="hero-content">
+          <span class="hero-badge"><i class="fa-solid fa-fire"></i> Featured Blockbuster</span>
+          <h1 class="hero-title">Inception (2010)</h1>
+          <div class="hero-meta">
+            <span><i class="fa-solid fa-star text-gold"></i> 8.8 / 10</span>
+            <span>•</span>
+            <span><i class="fa-regular fa-clock"></i> 2h 28m</span>
+            <span>•</span>
+            <span>Sci-Fi, Action, Thriller</span>
+          </div>
+          <p class="hero-desc">
+            Dom Cobb is a skilled thief who steals valuable corporate secrets from deep within the subconscious during the dream state. Now he is offered a chance to regain his old life in exchange for the near-impossible task of inception.
+          </p>
+          <div class="hero-actions">
+            <a href="movie-details.html" class="btn btn-primary">
+              <i class="fa-solid fa-circle-info"></i>
+              View Details
+            </a>
+            <a href="movie-details.html#trailer" class="btn btn-gold">
+              <i class="fa-solid fa-play"></i>
+              Watch Trailer
+            </a>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Featured Movies Section (4 Prominent Cards) -->
+      <section>
+        <div class="section-title">
+          <span><i class="fa-solid fa-star text-gold"></i> Featured Movies</span>
+          <a href="movies.html" class="btn btn-outline btn-sm">Browse Catalog <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="movie-grid">
+          
+          <!-- Card 1: Inception -->
+          <article class="movie-card">
+            <div class="movie-poster-box">
+              <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?w=800&auto=format&fit=crop&q=80" alt="Inception Poster" loading="lazy">
+              <div class="card-rating-badge"><i class="fa-solid fa-star"></i> 8.8</div>
+              <div class="card-fav-badge active"><i class="fa-solid fa-heart"></i></div>
+            </div>
+            <div class="movie-card-body">
+              <h3 class="movie-card-title"><a href="movie-details.html">Inception</a></h3>
+              <div class="movie-card-meta">
+                <span><i class="fa-regular fa-calendar"></i> 2010</span>
+                <span>•</span>
+                <span><i class="fa-regular fa-clock"></i> 2h 28m</span>
+                <span>•</span>
+                <span>English</span>
+              </div>
+              <div class="genre-tags">
+                <span class="genre-tag">Sci-Fi</span>
+                <span class="genre-tag">Action</span>
+                <span class="genre-tag">Thriller</span>
+              </div>
+              <p class="movie-card-desc">A thief who steals corporate secrets through dream-sharing technology is given the inverse task of planting an idea.</p>
+              <div class="movie-card-action">
+                <a href="movie-details.html" class="btn btn-primary btn-sm"><i class="fa-solid fa-circle-info"></i> View Details</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2: The Dark Knight -->
+          <article class="movie-card">
+            <div class="movie-poster-box">
+              <img src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=800&auto=format&fit=crop&q=80" alt="The Dark Knight Poster" loading="lazy">
+              <div class="card-rating-badge"><i class="fa-solid fa-star"></i> 9.0</div>
+              <div class="card-fav-badge"><i class="fa-regular fa-heart"></i></div>
+            </div>
+            <div class="movie-card-body">
+              <h3 class="movie-card-title"><a href="movie-details.html">The Dark Knight</a></h3>
+              <div class="movie-card-meta">
+                <span><i class="fa-regular fa-calendar"></i> 2008</span>
+                <span>•</span>
+                <span><i class="fa-regular fa-clock"></i> 2h 32m</span>
+                <span>•</span>
+                <span>English</span>
+              </div>
+              <div class="genre-tags">
+                <span class="genre-tag">Action</span>
+                <span class="genre-tag">Crime</span>
+                <span class="genre-tag">Drama</span>
+              </div>
+              <p class="movie-card-desc">When the menace known as the Joker wreaks havoc and chaos on Gotham City, Batman must face a psychological test of justice.</p>
+              <div class="movie-card-action">
+                <a href="movie-details.html" class="btn btn-primary btn-sm"><i class="fa-solid fa-circle-info"></i> View Details</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3: Interstellar -->
+          <article class="movie-card">
+            <div class="movie-poster-box">
+              <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop&q=80" alt="Interstellar Poster" loading="lazy">
+              <div class="card-rating-badge"><i class="fa-solid fa-star"></i> 8.7</div>
+              <div class="card-fav-badge active"><i class="fa-solid fa-heart"></i></div>
+            </div>
+            <div class="movie-card-body">
+              <h3 class="movie-card-title"><a href="movie-details.html">Interstellar</a></h3>
+              <div class="movie-card-meta">
+                <span><i class="fa-regular fa-calendar"></i> 2014</span>
+                <span>•</span>
+                <span><i class="fa-regular fa-clock"></i> 2h 49m</span>
+                <span>•</span>
+                <span>English</span>
+              </div>
+              <div class="genre-tags">
+                <span class="genre-tag">Sci-Fi</span>
+                <span class="genre-tag">Adventure</span>
+                <span class="genre-tag">Drama</span>
+              </div>
+              <p class="movie-card-desc">When Earth becomes uninhabitable, a team of explorers travel through a wormhole in space to ensure humanity's survival.</p>
+              <div class="movie-card-action">
+                <a href="movie-details.html" class="btn btn-primary btn-sm"><i class="fa-solid fa-circle-info"></i> View Details</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4: Parasite -->
+          <article class="movie-card">
+            <div class="movie-poster-box">
+              <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=800&auto=format&fit=crop&q=80" alt="Parasite Poster" loading="lazy">
+              <div class="card-rating-badge"><i class="fa-solid fa-star"></i> 8.5</div>
+              <div class="card-fav-badge"><i class="fa-regular fa-heart"></i></div>
+            </div>
+            <div class="movie-card-body">
+              <h3 class="movie-card-title"><a href="movie-details.html">Parasite</a></h3>
+              <div class="movie-card-meta">
+                <span><i class="fa-regular fa-calendar"></i> 2019</span>
+                <span>•</span>
+                <span><i class="fa-regular fa-clock"></i> 2h 12m</span>
+                <span>•</span>
+                <span>Korean</span>
+              </div>
+              <div class="genre-tags">
+                <span class="genre-tag">Drama</span>
+                <span class="genre-tag">Thriller</span>
+                <span class="genre-tag">Comedy</span>
+              </div>
+              <p class="movie-card-desc">Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and Kim clan.</p>
+              <div class="movie-card-action">
+                <a href="movie-details.html" class="btn btn-primary btn-sm"><i class="fa-solid fa-circle-info"></i> View Details</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      
+
+      <!-- Call to Action -->
+      <section class="cta-box">
+        <h2>Explore the Complete Movie Universe</h2>
+        <p>
+          Discover critically acclaimed cinema, read community critiques, examine comprehensive storylines, and build your curated watchlist.
+        </p>
+        <div class="cta-buttons">
+          <a href="movies.html" class="btn btn-primary">
+            <i class="fa-solid fa-film"></i>
+            Browse All Movies
+          </a>
+          <a href="favorites.html" class="btn btn-outline">
+            <i class="fa-solid fa-heart"></i>
+            View My Favorites
+          </a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Semantic Footer (Pure HTML & CSS) -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid footer-grid-3">
+        <div class="footer-col">
+          <div class="footer-brand">
+            <span class="brand-icon">
+              <i class="fa-solid fa-film"></i>
+            </span>
+            <h3>Cine<span class="text-red">Pulse</span></h3>
+          </div>
+          <p>
+            Movie Information Portal - Developed for Web Technology–I (2301CS363). A structured, responsive static frontend showcasing HTML5 semantic elements and CSS3 design principles.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="movies.html">All Movies</a></li>
+            <li><a href="favorites.html">Favorites</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Academic Information</h4>
+          <p><strong>Course:</strong> Web Technology–I (2301CS363)</p>
+          <p><strong>Phase:</strong> Phase-1 Evaluation (HTML5 + CSS3)</p>
+          <p><strong>Institution:</strong> Darshan Institute of Engineering & Technology</p>
+          <p><strong>Department:</strong> Computer Engineering</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 CinePulse Movie Portal. Designed for Phase-1 Academic Evaluation.</div>
+        <div>Made with <i class="fa-solid fa-heart text-red"></i> by Computer Engineering Department</div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

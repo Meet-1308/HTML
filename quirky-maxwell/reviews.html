@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community Reviews &amp; Ratings - CinePulse | Phase-1 Static UI</title>
+  
+  <!-- Font Awesome 6.5.1 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Pure CSS Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/reviews.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a class="navbar-brand" href="index.html">
+        <span class="brand-icon"><i class="fa-solid fa-film"></i></span>
+        <span>Cine<span class="text-red">Pulse</span></span>
+      </a>
+
+      <nav>
+        <ul class="nav-menu">
+          <li>
+            <a class="nav-link" href="index.html">
+              <i class="fa-solid fa-house"></i> Home
+            </a>
+          </li>
+          <li>
+            <a class="nav-link" href="movies.html">
+              <i class="fa-solid fa-film"></i> Movies
+            </a>
+          </li>
+          <li>
+            <a class="nav-link" href="favorites.html">
+              <i class="fa-solid fa-heart"></i> Favorites
+              <span class="nav-badge">4</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link active" href="reviews.html">
+              <i class="fa-solid fa-star"></i> Reviews
+            </a>
+          </li>
+          <li>
+            <a class="nav-link" href="contact.html">
+              <i class="fa-solid fa-envelope"></i> Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="container">
+
+      <!-- Breadcrumb -->
+      <ul class="breadcrumb">
+        <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li class="breadcrumb-separator"><i class="fa-solid fa-chevron-right"></i></li>
+        <li><i class="fa-solid fa-star"></i> Community Reviews &amp; Ratings</li>
+      </ul>
+
+      <!-- Page Header -->
+      <div class="page-header">
+        <h1><i class="fa-solid fa-star text-gold"></i> Community Reviews &amp; Ratings</h1>
+        <p class="text-secondary">
+          Read genuine movie critiques from fellow cinephiles and share your personal movie rating.
+        </p>
+      </div>
+
+      <!-- Two-Column Page Layout -->
+      <div class="reviews-layout-grid">
+        
+        <!-- Left Column: Review Submission Form -->
+        <div>
+          <div class="card-box">
+            <h3><i class="fa-solid fa-pen-to-square"></i> Submit a Review</h3>
+            <p>
+              Rate any film from our catalog and share your thoughts on its narrative, directing, and performance.
+            </p>
+
+            <form action="reviews.html" method="GET">
+              
+              <!-- Reviewer Name -->
+              <div class="form-group">
+                <label class="form-label" for="userName"><i class="fa-solid fa-user"></i> Your Full Name <span class="required">*</span></label>
+                <input type="text" id="userName" name="name" class="form-input" placeholder="e.g. John Doe" required minlength="3">
+              </div>
+
+              <!-- Reviewer Email -->
+              <div class="form-group">
+                <label class="form-label" for="userEmail"><i class="fa-solid fa-envelope"></i> Your Email Address <span class="required">*</span></label>
+                <input type="email" id="userEmail" name="email" class="form-input" placeholder="e.g. john@example.com" required>
+              </div>
+
+              <!-- Movie Input -->
+              <div class="form-group">
+                <label class="form-label" for="selectedMovie"><i class="fa-solid fa-film"></i> Movie Title <span class="required">*</span></label>
+                <input type="text" id="selectedMovie" name="movie" class="form-input" placeholder="Enter movie title (e.g. Inception, The Dark Knight)..." required>
+              </div>
+
+              <!-- Rating Selection -->
+              <div class="form-group">
+                <label class="form-label" for="movieRatingScore"><i class="fa-solid fa-star"></i> Your Rating Score (1 to 10 Stars) <span class="required">*</span></label>
+                <select id="movieRatingScore" name="rating" class="form-select" required>
+                  <option value="10">10/10 - Masterpiece!</option>
+                  <option value="9" selected>9/10 - Excellent</option>
+                  <option value="8">8/10 - Very Good</option>
+                  <option value="7">7/10 - Good</option>
+                  <option value="6">6/10 - Decent</option>
+                  <option value="5">5/10 - Average</option>
+                </select>
+              </div>
+
+              <!-- Review Message -->
+              <div class="form-group">
+                <label class="form-label" for="reviewMessage"><i class="fa-solid fa-comment-dots"></i> Your Written Critique <span class="required">*</span></label>
+                <textarea id="reviewMessage" name="comment" class="form-textarea" placeholder="Discuss the direction, acting, music, cinematography, and overall impression..." required minlength="15" maxlength="500"></textarea>
+                <span class="form-hint">Min 15 characters, max 500 characters.</span>
+              </div>
+
+              <!-- Submit -->
+              <button type="submit" class="btn btn-primary btn-full">
+                <i class="fa-solid fa-paper-plane"></i> Publish Movie Review
+              </button>
+
+            </form>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Community Reviews Feed -->
+        <div>
+          
+          <div class="reviews-feed-header">
+            <h3><i class="fa-solid fa-comments"></i> Recent Community Reviews</h3>
+            <span class="text-secondary"><i class="fa-solid fa-star text-gold"></i> 5 Reviews Published</span>
+          </div>
+
+          <!-- Review 1: Inception -->
+          <article class="review-card-item">
+            <div class="review-header-flex">
+              <div class="review-user-group">
+                <div class="user-avatar-badge">AJ</div>
+                <div>
+                  <div class="user-meta-name">Alex Johnson</div>
+                  <div class="movie-reviewed-tag">
+                    Reviewed <a href="movie-details.html">Inception (2010)</a> &bull; Aug 15, 2026
+                  </div>
+                </div>
+              </div>
+              <div>
+                <span class="rating-badge-pill"><i class="fa-solid fa-star"></i> 10 / 10</span>
+                <div class="stars-rendered">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <p class="review-body-text">
+              An absolute masterpiece of modern cinema. The visual effects, Hans Zimmer score, and mind-bending narrative are second to none. The rotating hallway corridor sequence remains unmatched in practical action choreography.
+            </p>
+          </article>
+
+          <!-- Review 2: The Dark Knight -->
+          <article class="review-card-item">
+            <div class="review-header-flex">
+              <div class="review-user-group">
+                <div class="user-avatar-badge avatar-green">SM</div>
+                <div>
+                  <div class="user-meta-name">Sophia Martinez</div>
+                  <div class="movie-reviewed-tag">
+                    Reviewed <a href="movie-details.html">The Dark Knight (2008)</a> &bull; Aug 22, 2026
+                  </div>
+                </div>
+              </div>
+              <div>
+                <span class="rating-badge-pill"><i class="fa-solid fa-star"></i> 10 / 10</span>
+                <div class="stars-rendered">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <p class="review-body-text">
+              Heath Ledger's Joker is legendary. The moral ambiguity and breathtaking action elevate this far beyond typical comic book movies. Every single line of dialogue between Batman and Joker feels profoundly philosophical.
+            </p>
+          </article>
+
+          <!-- Review 3: Interstellar -->
+          <article class="review-card-item">
+            <div class="review-header-flex">
+              <div class="review-user-group">
+                <div class="user-avatar-badge avatar-orange">DC</div>
+                <div>
+                  <div class="user-meta-name">David Chen</div>
+                  <div class="movie-reviewed-tag">
+                    Reviewed <a href="movie-details.html">Interstellar (2014)</a> &bull; Sep 01, 2026
+                  </div>
+                </div>
+              </div>
+              <div>
+                <span class="rating-badge-pill"><i class="fa-solid fa-star"></i> 9 / 10</span>
+                <div class="stars-rendered">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <p class="review-body-text">
+              Emotionally resonant and scientifically captivating. The docking scene with the soaring pipe organ score gives me goosebumps every single time. A poignant exploration of love transcending time and space.
+            </p>
+          </article>
+
+          <!-- Review 4: Parasite -->
+          <article class="review-card-item">
+            <div class="review-header-flex">
+              <div class="review-user-group">
+                <div class="user-avatar-badge avatar-pink">EL</div>
+                <div>
+                  <div class="user-meta-name">Emma Laurent</div>
+                  <div class="movie-reviewed-tag">
+                    Reviewed <a href="movie-details.html">Parasite (2019)</a> &bull; Sep 04, 2026
+                  </div>
+                </div>
+              </div>
+              <div>
+                <span class="rating-badge-pill"><i class="fa-solid fa-star"></i> 9 / 10</span>
+                <div class="stars-rendered">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <p class="review-body-text">
+              Bong Joon Ho crafted an airtight black comedy and socio-economic critique. The architectural layout of the Park house mirrors societal hierarchy with devastating brilliance.
+            </p>
+          </article>
+
+          <!-- Review 5: Oppenheimer -->
+          <article class="review-card-item">
+            <div class="review-header-flex">
+              <div class="review-user-group">
+                <div class="user-avatar-badge avatar-blue">RK</div>
+                <div>
+                  <div class="user-meta-name">Rohan Kulkarni</div>
+                  <div class="movie-reviewed-tag">
+                    Reviewed <a href="movie-details.html">Oppenheimer (2023)</a> &bull; Sep 08, 2026
+                  </div>
+                </div>
+              </div>
+              <div>
+                <span class="rating-badge-pill"><i class="fa-solid fa-star"></i> 9 / 10</span>
+                <div class="stars-rendered">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <p class="review-body-text">
+              Cillian Murphy delivers the performance of a lifetime. The Trinity test scene's deliberate silence followed by the seismic shockwave was an unforgettable auditory and visual experience.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Semantic Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid footer-grid-3">
+        <div class="footer-col">
+          <div class="footer-brand">
+            <span class="brand-icon"><i class="fa-solid fa-film"></i></span>
+            <h3>Cine<span class="text-red">Pulse</span></h3>
+          </div>
+          <p>
+            Movie Information Portal - Developed for Web Technology–I (2301CS363). Demonstrating static review submission forms and community review layouts.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="movies.html">All Movies</a></li>
+            <li><a href="favorites.html">Favorites</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Department Info</h4>
+          <p><strong>Course:</strong> Web Technology–I (2301CS363)</p>
+          <p><strong>Department:</strong> Computer Engineering</p>
+          <p><strong>Institute:</strong> Darshan Institute of Engineering &amp; Technology</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 CinePulse Movie Portal. Designed for Phase-1 Academic Evaluation.</div>
+        <div>Made with <i class="fa-solid fa-heart text-red"></i> by Computer Engineering Department</div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us &amp; Feedback - CinePulse | Phase-1 Static UI</title>
+  
+  <!-- Font Awesome 6.5.1 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Pure CSS Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a class="navbar-brand" href="index.html">
+        <span class="brand-icon"><i class="fa-solid fa-film"></i></span>
+        <span>Cine<span class="text-red">Pulse</span></span>
+      </a>
+
+      <nav>
+        <ul class="nav-menu">
+          <li>
+            <a class="nav-link" href="index.html">
+              <i class="fa-solid fa-house"></i> Home
+            </a>
+          </li>
+          <li>
+            <a class="nav-link" href="movies.html">
+              <i class="fa-solid fa-film"></i> Movies
+            </a>
+          </li>
+          <li>
+            <a class="nav-link" href="favorites.html">
+              <i class="fa-solid fa-heart"></i> Favorites
+              <span class="nav-badge">4</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link" href="reviews.html">
+              <i class="fa-solid fa-star"></i> Reviews
+            </a>
+          </li>
+          <li>
+            <a class="nav-link active" href="contact.html">
+              <i class="fa-solid fa-envelope"></i> Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="container">
+
+      <!-- Breadcrumb -->
+      <ul class="breadcrumb">
+        <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li class="breadcrumb-separator"><i class="fa-solid fa-chevron-right"></i></li>
+        <li><i class="fa-solid fa-envelope"></i> Contact &amp; Feedback</li>
+      </ul>
+
+      <!-- Page Header -->
+      <div class="page-header">
+        <h1><i class="fa-solid fa-envelope text-red"></i> Contact &amp; Department Feedback</h1>
+        <p class="text-secondary">
+          Have questions, suggestions, or project feedback? Reach out to the student development team.
+        </p>
+      </div>
+
+      <!-- Two-Column Grid -->
+      <div class="contact-layout-grid">
+        
+        <!-- Left Column: Department Information -->
+        <div>
+          
+          <!-- Info Box -->
+          <article class="card-box">
+            <h3><i class="fa-solid fa-building-columns"></i> Department Information</h3>
+            <p>
+              The Movie Information Portal is developed under the syllabus of <strong>Web Technology–I (2301CS363)</strong> at <strong>Darshan Institute of Engineering &amp; Technology</strong>.
+            </p>
+
+            <div class="info-item">
+              <div class="info-icon-box"><i class="fa-solid fa-location-dot"></i></div>
+              <div>
+                <span class="info-label">Campus Address</span>
+                <span class="info-value">Rajkot - Morbi Highway, Hadala, Gujarat 363650, India</span>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon-box"><i class="fa-solid fa-envelope"></i></div>
+              <div>
+                <span class="info-label">Institutional Email</span>
+                <span class="info-value"><a href="mailto:info@darshan.ac.in">info@darshan.ac.in</a></span>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon-box"><i class="fa-solid fa-phone"></i></div>
+              <div>
+                <span class="info-label">Department Telephone</span>
+                <span class="info-value">+91 97277 47310 / 47311</span>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon-box"><i class="fa-regular fa-clock"></i></div>
+              <div>
+                <span class="info-label">Laboratory Working Hours</span>
+                <span class="info-value">Monday &ndash; Saturday: 8:00 AM &ndash; 4:00 PM</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Right Column: Contact & Feedback Form -->
+        <div>
+          <section class="card-box">
+            <h3><i class="fa-solid fa-paper-plane"></i> Send an Inquiry or Feedback</h3>
+            <p>
+              Fill out the form below. All required fields are validated using native HTML5 client-side constraints.
+            </p>
+
+            <form action="contact.html" method="GET">
+              
+              <div class="grid-2">
+                <!-- Full Name -->
+                <div class="form-group">
+                  <label class="form-label" for="senderName"><i class="fa-solid fa-user"></i> Full Name <span class="required">*</span></label>
+                  <input type="text" id="senderName" name="name" class="form-input" placeholder="e.g. Rahul Sharma" required minlength="3" pattern="[A-Za-z\s]+">
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                  <label class="form-label" for="senderEmail"><i class="fa-solid fa-envelope"></i> Email Address <span class="required">*</span></label>
+                  <input type="email" id="senderEmail" name="email" class="form-input" placeholder="e.g. rahul@example.com" required>
+                </div>
+              </div>
+
+              <div class="grid-2">
+                <!-- Category Select -->
+                <div class="form-group">
+                  <label class="form-label" for="inquiryType"><i class="fa-solid fa-tag"></i> Inquiry Category <span class="required">*</span></label>
+                  <select id="inquiryType" name="category" class="form-select" required>
+                    <option value="">-- Choose Category --</option>
+                    <option value="general">General Portal Inquiry</option>
+                    <option value="suggestion">Suggest a New Movie</option>
+                    <option value="ui_feedback">User Interface Feedback</option>
+                    <option value="academic">Academic Evaluation Inquiry</option>
+                  </select>
+                </div>
+
+                <!-- Subject Line -->
+                <div class="form-group">
+                  <label class="form-label" for="inquirySubject"><i class="fa-solid fa-pen"></i> Subject Line <span class="required">*</span></label>
+                  <input type="text" id="inquirySubject" name="subject" class="form-input" placeholder="Brief subject heading..." required minlength="4">
+                </div>
+              </div>
+
+              <!-- Message -->
+              <div class="form-group">
+                <label class="form-label" for="inquiryMessage"><i class="fa-solid fa-comment-dots"></i> Detailed Message <span class="required">*</span></label>
+                <textarea id="inquiryMessage" name="message" class="form-textarea" placeholder="Type your detailed message or feedback here..." required minlength="20" maxlength="600"></textarea>
+                <span class="form-hint">Minimum 20 characters, maximum 600 characters.</span>
+              </div>
+
+              <!-- Submit -->
+              <button type="submit" class="btn btn-primary btn-full">
+                <i class="fa-solid fa-paper-plane"></i> Submit Inquiry
+              </button>
+
+            </form>
+          </section>
+        </div>
+
+      </div>
+
+      <!-- Interactive FAQ Accordion (HTML5 details / summary) -->
+      <section class="faq-container">
+        <div class="section-title">
+          <span><i class="fa-solid fa-circle-question text-gold"></i> Frequently Asked Questions</span>
+        </div>
+
+        <details class="faq-item" open>
+          <summary><i class="fa-solid fa-film"></i> What is CinePulse Movie Portal?</summary>
+          <div class="faq-body">
+            CinePulse is a movie information web portal developed for the course <strong>Web Technology–I (2301CS363)</strong> at <strong>Darshan Institute of Engineering &amp; Technology</strong>. It showcases clean semantic HTML5 markup, responsive CSS3 layouts, and accessibility best practices without relying on external CSS frameworks or JavaScript.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary><i class="fa-solid fa-lightbulb"></i> How can I suggest a new movie for inclusion?</summary>
+          <div class="faq-body">
+            You can use the inquiry form above and select <strong>"Suggest a New Movie"</strong> in the category dropdown. Please mention the movie title, release year, director, and why it should be featured in our curated international catalog.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary><i class="fa-solid fa-heart"></i> How do favorites and watchlists function?</summary>
+          <div class="faq-body">
+            In this Phase-1 static frontend, the Favorites page displays curated bookmarked titles with runtime statistics, status filters ("Plan to Watch" vs "Watched"), and quick links to watch high-definition trailers.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary><i class="fa-solid fa-star"></i> How are movie reviews published?</summary>
+          <div class="faq-body">
+            Community members can submit reviews using the form on the Reviews page. Each submission includes a star rating, user details, and written critique adhering to the CinePulse community rating guidelines.
+          </div>
+        </details>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Semantic Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-brand">
+            <span class="brand-icon"><i class="fa-solid fa-film"></i></span>
+            <h3>Cine<span class="text-red">Pulse</span></h3>
+          </div>
+          <p>
+            Movie Information Portal - Developed for Web Technology–I (2301CS363). Demonstrating static contact and feedback forms with client-side HTML5 validation.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="movies.html">All Movies</a></li>
+            <li><a href="favorites.html">Favorites</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Academic Info</h4>
+          <p><strong>Course:</strong> Web Technology–I (2301CS363)</p>
+          <p><strong>Department:</strong> Computer Engineering</p>
+          <p><strong>Institute:</strong> Darshan Institute of Engineering &amp; Technology</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 CinePulse Movie Portal. Designed for Phase-1 Academic Evaluation.</div>
+        <div>Made with <i class="fa-solid fa-heart text-red"></i> by Computer Engineering Department</div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

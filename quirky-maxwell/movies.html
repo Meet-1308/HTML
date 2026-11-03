@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Catalog - CinePulse | Phase-1 Static UI</title>
+  
+  <!-- Pure CSS Stylesheets -->
+    <!-- Font Awesome 6.5.1 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/movies.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a class="navbar-brand" href="index.html">
+        <span class="brand-icon"><i class="fa-solid fa-film"></i></span>
+        <span>Cine<span class="text-red">Pulse</span></span>
+      </a>
+
+      <nav>
+        <ul class="nav-menu">
+          <li>
+            <a class="nav-link" href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+          </li>
+          <li>
+            <a class="nav-link active" href="movies.html"><i class="fa-solid fa-film"></i> Movies</a>
+          </li>
+          <li>
+            <a class="nav-link" href="favorites.html"><i class="fa-solid fa-heart"></i> Favorites <span class="nav-badge">4</span></a>
+          </li>
+          <li>
+            <a class="nav-link" href="reviews.html"><i class="fa-solid fa-star"></i> Reviews</a>
+          </li>
+          <li>
+            <a class="nav-link" href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="container">
+
+      <!-- Breadcrumb -->
+      <ul class="breadcrumb">
+        <li><a href="index.html">Home</a></li>
+        <li class="breadcrumb-separator"><i class="fa-solid fa-chevron-right"></i></li>
+        <li><i class="fa-solid fa-film"></i> Movies Catalog</li>
+      </ul>
+
+      <!-- Page Header -->
+      <div class="catalog-header">
+        <div>
+          <h1>Explore Movie Catalog</h1>
+          <p class="text-secondary">
+            Browse, search, and view curated films from international cinema.
+          </p>
+        </div>
+        <div>
+          <span class="results-badge"><i class="fa-solid fa-film"></i> 12 Movies Displayed</span>
+        </div>
+      </div>
+
+      <!-- Search Toolbar -->
+      <section class="search-toolbar">
+        <form action="movies.html" method="GET" class="search-form">
+          <label class="form-label" for="movieSearch"><i class="fa-solid fa-magnifying-glass"></i> Search Keyword</label>
+          <div class="search-input-group">
+            <input type="text" id="movieSearch" name="search" class="form-input" placeholder="Title, cast, or director...">
+            <button type="submit" class="btn btn-primary search-btn"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- Movie Collection Grid (12 Static Cards) -->
+      <section class="movie-grid">
+        
+        <!-- 1. The Shawshank Redemption -->
+        <article class="movie-card">
+          <div class="movie-poster-box">
+            <img src="https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?w=800&auto=format&fit=crop&q=80" alt="The Shawshank Redemption" loading="lazy">
+            <div class="card-rating-badge"><i class="fa-solid fa-star"></i> 9.3</div>
+            <div class="card-fav-badge active"><i class="fa-solid fa-heart"></i></div>
+          </div>
+          <div class="movie-card-body">
+            <h3 class="movie-card-title"><a href="movie-details.html">The Shawshank Redemption</a></h3>
+            <div class="movie-card-meta">
+              <span><i class="fa-regular fa-calendar"></i> 1994</span>
+              <span>•</span>
+              <span><i class="fa-regular fa-clock"></i> 2h 22m</span>
+              <span>•</span>
+              <span>English</span>
+            </div>
+            <div class="genre-tags">
+              <span class="genre-tag">Drama</span>
+            </div>
+            <p class="movie-card-desc">A banker wrongfully imprisoned forms a decades-long friendship with a fellow convict while seeking redemption.</p>
+            <div class="movie-card-action">
+              <a href="movie-details.html" class="btn btn-primary btn-sm"><i class="fa-solid fa-circle-info"></i> View Details</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2. The Dark Knight -->
+        <article class="movie-card">
+          <div class="movie-poster-box">
+            <img src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=800&auto=format&fit=crop&q=80" alt="The Dark Knight" loading="lazy">
+            <div class="card-rating-badge"><i class="fa-solid fa-star"></i> 9.0</div>
+            <div class="card-fav-badge active"><i class="fa-solid fa-heart"></i></div>
+          </div>
+          <div class="movie-card-body">
+            <h3 class="movie-card-title"><a href="movie-details.html">The Dark Knight</a></h3>
+            <div class="movie-card-meta">
+              <span><i class="fa-regular fa-calendar"></i> 2008</span>
+              <span>•</span>
+              <span><i class="fa-regular fa-clock"></i> 2h 32m</span>
+              <span>•</span>
+              <span>English</span>
+            </div>
+            <div class="genre-tags">
+              <span class="genre-tag">Action</span>
+              <span class="genre-tag">Crime</span>
+              <span class="genre-tag">Drama</span>
+            </div>
+            <p class="movie-card-desc">When the menace known as the Joker wreaks havoc and chaos on Gotham City, Batman must accept a test of justice.</p>
+            <div class="movie-card-action">
+              <a href="movie-details.html" class="btn btn-primary btn-sm"><i class="fa-solid fa-circle-info"></i> View Details</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 3. Oppenheimer -->
+        <article class="movie-card">
+          <div class="movie-poster-box">
+            <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b675?w=800&auto=format&fit=crop&q=80" alt="Oppenheimer" loading="lazy">
+            <div class="card-rating-badge"><i class="fa-solid fa-star"></i> 8.9</div>
+            <div class="card-fav-badge"><i class="fa-regular fa-heart"></i></div>
+          </div>
+          <div class="movie-card-body">
+            <h3 class="movie-card-title"><a href="movie-details.html">Oppenheimer</a></h3>
+            <div class="movie-card-meta">
+              <span><i class="fa-regular fa-calendar"></i> 2023</span>
+              <span>•</span>
+              <span><i class="fa-regular fa-clock"></i> 3h 00m</span>
+              <span>•</span>
+              <span>English</span>
+            </div>
+            <div class="genre-tags">
+              <span class="genre-tag">Biography</span>
+              <span class="genre-tag">Drama</span>
+              <span class="genre-tag">History</span>
+            </div>
+            <p class="movie-card-desc">The story of American scientist J. Robert Oppenheimer and his role in the Manhattan Project during World War II.</p>
+            <div class="movie-card-action">
+              <a href="movie-details.html" class="btn btn-primary btn-sm"><i class="fa-solid fa-circle-info"></i> View Details</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 4. Inception -->
+        <article class="movie-card">
+          <div class="movie-poster-box">
+            <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?w=800&auto=format&fit=crop&q=80" alt="Inception" loading="lazy">
+            <div class="card-rating-badge"><i class="fa-solid fa-star"></i> 8.8</div>
+            <div class="card-fav-badge active"><i class="fa-solid fa-heart"></i></div>
+          </div>
+          <div class="movie-card-body">
+            <h3 class="movie-card-title"><a href="movie-details.html">Inception</a></h3>
+            <div class="movie-card-meta">
+              <span><i class="fa-regular fa-calendar"></i> 2010</span>
+              <span>•</span>
+              <span><i class="fa-regular fa-clock"></i> 2h 28m</span>
+              <span>•</span>
+              <span>English</span>
+            </div>
+            <div class="genre-tags">
+              <span class="genre-tag">Sci-Fi</span>
+              <span class="genre-tag">Action</span>
+              <span class="genre-tag">Thriller</span>
+            </div>
+            <p class="movie-card-desc">A thief who steals corporate secrets through dream-sharing technology is given the inverse task of planting an idea.</p>
+            <div class="movie-card-action">
+              <a href="movie-details.html" class="btn btn-primary btn-sm"><i class="fa-solid fa-circle-info"></i> View Details</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 5. Interstellar -->
+        <article class="movie-card">
+          <div class="movie-poster-box">
+            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop&q=80" alt="Interstellar" loading="lazy">
+            <div class="card-rating-badge"><i class="fa-solid fa-star"></i> 8.7</div>
+            <div class="card-fav-badge active"><i class="fa-solid fa-heart"></i></div>
+          </div>
+          <div class="movie-card-body">
+            <h3 class="movie-card-title"><a href="movie-details.html">Interstellar</a></h3>
+            <div class="movie-card-meta">
+              <span><i class="fa-regular fa-calendar"></i> 2014</span>
+              <span>•</span>
+              <span><i class="fa-regular fa-clock"></i> 2h 49m</span>
+              <span>•</span>
+              <span>English</span>
+            </div>
+            <div class="genre-tags">
+              <span class="genre-tag">Sci-Fi</span>
+              <span class="genre-tag">Adventure</span>
+              <span class="genre-tag">Drama</span>
+            </div>
+            <p class="movie-card-desc">When Earth becomes uninhabitable, a team of explorers travel through a wormhole in space to ensure humanity's survival.</p>
+            <div class="movie-card-action">
+              <a href="movie-details.html" class="btn btn-primary btn-sm"><i class="fa-solid fa-circle-info"></i> View Details</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 6. Spirited Away -->
+        <article class="movie-card">
+          <div class="movie-poster-box">
+            <img src="https://images.unsplash.com/photo-1578632767115-351597cf2477?w=800&auto=format&fit=crop&q=80" alt="Spirited Away" loading="lazy">
+            <div class="card-rating-badge"><i class="fa-solid fa-star"></i> 8.6</div>
+            <div class="card-fav-badge"><i class="fa-regular fa-heart"></i></div>
+          </div>
+          <div class="movie-card-body">
+            <h3 class="movie-card-title"><a href="movie-details.html">Spirited Away</a></h3>
+            <div class="movie-card-meta">
+              <span><i class="fa-regular fa-calendar"></i> 2001</span>
+              <span>•</span>
+              <span><i class="fa-regular fa-clock"></i> 2h 05m</span>
+              <span>•</span>
+              <span>Japanese</span>
+            </div>
+            <div class="genre-tags">
+              <span class="genre-tag">Animation</span>
+              <span class="genre-tag">Adventure</span>
+              <span class="genre-tag">Fantasy</span>
+            </div>
+            <p class="movie-card-desc">A 10-year-old girl wanders into a world ruled by spirits where humans are transformed into beasts.</p>
+            <div class="movie-card-action">
+              <a href="movie-details.html" class="btn btn-primary btn-sm"><i class="fa-solid fa-circle-info"></i> View Details</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 7. Parasite -->
+        <article class="movie-card">
+          <div class="movie-poster-box">
+            <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=800&auto=format&fit=crop&q=80" alt="Parasite" loading="lazy">
+            <div class="card-rating-badge"><i class="fa-solid fa-star"></i> 8.5</div>
+            <div class="card-fav-badge"><i class="fa-regular fa-heart"></i></div>
+          </div>
+          <div class="movie-card-body">
+            <h3 class="movie-card-title"><a href="movie-details.html">Parasite</a></h3>
+            <div class="movie-card-meta">
+              <span><i class="fa-regular fa-calendar"></i> 2019</span>
+              <span>•</span>
+              <span><i class="fa-regular fa-clock"></i> 2h 12m</span>
+              <span>•</span>
+              <span>Korean</span>
+            </div>
+            <div class="genre-tags">
+              <span class="genre-tag">Drama</span>
+              <span class="genre-tag">Thriller</span>
+              <span class="genre-tag">Comedy</span>
+            </div>
+            <p class="movie-card-desc">Greed and class discrimination threaten the symbiotic relationship between the wealthy Park family and Kim clan.</p>
+            <div class="movie-card-action">
+              <a href="movie-details.html" class="btn btn-primary btn-sm"><i class="fa-solid fa-circle-info"></i> View Details</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 8. Gladiator -->
+        <article class="movie-card">
+          <div class="movie-poster-box">
+            <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=800&auto=format&fit=crop&q=80" alt="Gladiator" loading="lazy">
+            <div class="card-rating-badge"><i class="fa-solid fa-star"></i> 8.5</div>
+            <div class="card-fav-badge"><i class="fa-regular fa-heart"></i></div>
+          </div>
+          <div class="movie-card-body">
+            <h3 class="movie-card-title"><a href="movie-details.html">Gladiator</a></h3>
+            <div class="movie-card-meta">
+              <span><i class="fa-regular fa-calendar"></i> 2000</span>
+              <span>•</span>
+              <span><i class="fa-regular fa-clock"></i> 2h 35m</span>
+              <span>•</span>
+              <span>English</span>
+            </div>
+            <div class="genre-tags">
+              <span class="genre-tag">Action</span>
+              <span class="genre-tag">Adventure</span>
+              <span class="genre-tag">Drama</span>
+            </div>
+            <p class="movie-card-desc">A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family.</p>
+            <div class="movie-card-action">
+              <a href="movie-details.html" class="btn btn-primary btn-sm"><i class="fa-solid fa-circle-info"></i> View Details</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 9. Dangal -->
+        <article class="movie-card">
+          <div class="movie-poster-box">
+            <img src="https://images.unsplash.com/photo-1517649763962-0c623266ddc0?w=800&auto=format&fit=crop&q=80" alt="Dangal" loading="lazy">
+            <div class="card-rating-badge"><i class="fa-solid fa-star"></i> 8.3</div>
+            <div class="card-fav-badge active"><i class="fa-solid fa-heart"></i></div>
+          </div>
+          <div class="movie-card-body">
+            <h3 class="movie-card-title"><a href="movie-details.html">Dangal</a></h3>
+            <div class="movie-card-meta">
+              <span><i class="fa-regular fa-calendar"></i> 2016</span>
+              <span>•</span>
+              <span><i class="fa-regular fa-clock"></i> 2h 41m</span>
+              <span>•</span>
+              <span>Hindi</span>
+            </div>
+            <div class="genre-tags">
+              <span class="genre-tag">Biography</span>
+              <span class="genre-tag">Drama</span>
+              <span class="genre-tag">Action</span>
+            </div>
+            <p class="movie-card-desc">Former wrestler Mahavir Singh Phogat trains his daughters to win glory at the Commonwealth Games.</p>
+            <div class="movie-card-action">
+              <a href="movie-details.html" class="btn btn-primary btn-sm"><i class="fa-solid fa-circle-info"></i> View Details</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 10. 3 Idiots -->
+        <article class="movie-card">
+          <div class="movie-poster-box">
+            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&auto=format&fit=crop&q=80" alt="3 Idiots" loading="lazy">
+            <div class="card-rating-badge"><i class="fa-solid fa-star"></i> 8.4</div>
+            <div class="card-fav-badge"><i class="fa-regular fa-heart"></i></div>
+          </div>
+          <div class="movie-card-body">
+            <h3 class="movie-card-title"><a href="movie-details.html">3 Idiots</a></h3>
+            <div class="movie-card-meta">
+              <span><i class="fa-regular fa-calendar"></i> 2009</span>
+              <span>•</span>
+              <span><i class="fa-regular fa-clock"></i> 2h 50m</span>
+              <span>•</span>
+              <span>Hindi</span>
+            </div>
+            <div class="genre-tags">
+              <span class="genre-tag">Comedy</span>
+              <span class="genre-tag">Drama</span>
+            </div>
+            <p class="movie-card-desc">Two friends recall the memories of their engineering college mate who inspired them to think unconventionally.</p>
+            <div class="movie-card-action">
+              <a href="movie-details.html" class="btn btn-primary btn-sm"><i class="fa-solid fa-circle-info"></i> View Details</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 11. Coco -->
+        <article class="movie-card">
+          <div class="movie-poster-box">
+            <img src="https://images.unsplash.com/photo-1514565131-fce0801e5785?w=800&auto=format&fit=crop&q=80" alt="Coco" loading="lazy">
+            <div class="card-rating-badge"><i class="fa-solid fa-star"></i> 8.4</div>
+            <div class="card-fav-badge"><i class="fa-regular fa-heart"></i></div>
+          </div>
+          <div class="movie-card-body">
+            <h3 class="movie-card-title"><a href="movie-details.html">Coco</a></h3>
+            <div class="movie-card-meta">
+              <span><i class="fa-regular fa-calendar"></i> 2017</span>
+              <span>•</span>
+              <span><i class="fa-regular fa-clock"></i> 1h 45m</span>
+              <span>•</span>
+              <span>Spanish</span>
+            </div>
+            <div class="genre-tags">
+              <span class="genre-tag">Animation</span>
+              <span class="genre-tag">Adventure</span>
+              <span class="genre-tag">Family</span>
+            </div>
+            <p class="movie-card-desc">Aspiring musician Miguel enters the Land of the Dead to find his great-great-grandfather, a legendary singer.</p>
+            <div class="movie-card-action">
+              <a href="movie-details.html" class="btn btn-primary btn-sm"><i class="fa-solid fa-circle-info"></i> View Details</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 12. Pulp Fiction -->
+        <article class="movie-card">
+          <div class="movie-poster-box">
+            <img src="https://images.unsplash.com/photo-1594909122845-11baa439b7bf?w=800&auto=format&fit=crop&q=80" alt="Pulp Fiction" loading="lazy">
+            <div class="card-rating-badge"><i class="fa-solid fa-star"></i> 8.9</div>
+            <div class="card-fav-badge"><i class="fa-regular fa-heart"></i></div>
+          </div>
+          <div class="movie-card-body">
+            <h3 class="movie-card-title"><a href="movie-details.html">Pulp Fiction</a></h3>
+            <div class="movie-card-meta">
+              <span><i class="fa-regular fa-calendar"></i> 1994</span>
+              <span>•</span>
+              <span><i class="fa-regular fa-clock"></i> 2h 34m</span>
+              <span>•</span>
+              <span>English</span>
+            </div>
+            <div class="genre-tags">
+              <span class="genre-tag">Crime</span>
+              <span class="genre-tag">Drama</span>
+            </div>
+            <p class="movie-card-desc">The lives of two mob hitmen, a boxer, a gangster and his wife intertwine in four tales of violence and redemption.</p>
+            <div class="movie-card-action">
+              <a href="movie-details.html" class="btn btn-primary btn-sm"><i class="fa-solid fa-circle-info"></i> View Details</a>
+            </div>
+          </div>
+        </article>
+
+      </section>
+
+      <!-- Pagination Controls (FR-05) -->
+      
+
+    </div>
+  </main>
+
+  <!-- Semantic Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid footer-grid-3">
+        <div class="footer-col">
+          <div class="footer-brand">
+            <span class="brand-icon"><i class="fa-solid fa-film"></i></span>
+            <h3>Cine<span class="text-red">Pulse</span></h3>
+          </div>
+          <p>
+            Movie Information Portal - Developed for Web Technology–I (2301CS363). Demonstrating responsive grid layout, movie cards, and filter controls.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="movies.html">All Movies</a></li>
+            <li><a href="favorites.html">Favorites</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Department Info</h4>
+          <p><strong>Department:</strong> Computer Engineering</p>
+          <p><strong>Institution:</strong> Darshan Institute of Engineering & Technology</p>
+          <p><strong>Phase:</strong> Phase-1 Static UI Submission</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 CinePulse Movie Portal. Designed for Phase-1 Academic Evaluation.</div>
+        <div>Web Technology–I (2301CS363)</div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

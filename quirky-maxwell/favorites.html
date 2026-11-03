@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Favorites - CinePulse | Phase-1 Static UI</title>
+  
+  <!-- Font Awesome 6.5.1 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Pure CSS Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/favorites.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a class="navbar-brand" href="index.html">
+        <span class="brand-icon">
+          <i class="fa-solid fa-film"></i>
+        </span>
+        <span>Cine<span class="text-red">Pulse</span></span>
+      </a>
+
+      <nav>
+        <ul class="nav-menu">
+          <li>
+            <a class="nav-link" href="index.html">
+              <i class="fa-solid fa-house"></i>
+              Home
+            </a>
+          </li>
+          <li>
+            <a class="nav-link" href="movies.html">
+              <i class="fa-solid fa-film"></i>
+              Movies
+            </a>
+          </li>
+          <li>
+            <a class="nav-link active" href="favorites.html">
+              <i class="fa-solid fa-heart"></i>
+              Favorites
+              <span class="nav-badge">4</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link" href="reviews.html">
+              <i class="fa-solid fa-star"></i>
+              Reviews
+            </a>
+          </li>
+          <li>
+            <a class="nav-link" href="contact.html">
+              <i class="fa-solid fa-envelope"></i>
+              Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="container">
+
+      <!-- Breadcrumb -->
+      <ul class="breadcrumb">
+        <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li class="breadcrumb-separator"><i class="fa-solid fa-chevron-right"></i></li>
+        <li><i class="fa-solid fa-heart"></i> Favorites & Watchlist</li>
+      </ul>
+
+      <!-- Page Header -->
+      <div class="favorites-header">
+        <div>
+          <h1>My Watchlist &amp; Favorites</h1>
+          <p class="text-secondary">
+            Curated list of movies bookmarked for future viewing.
+          </p>
+        </div>
+        <div>
+          <a href="favorites.html" class="btn btn-danger-outline btn-sm">
+            <i class="fa-solid fa-trash"></i>
+            Clear All Favorites
+          </a>
+        </div>
+      </div>
+
+      <!-- Watchlist Statistics Bar -->
+      <section class="watchlist-stats-grid">
+        <div class="watchlist-stat-card">
+          <div class="watchlist-stat-val">4</div>
+          <div class="watchlist-stat-label"><i class="fa-solid fa-film"></i> Saved Movies</div>
+        </div>
+        <div class="watchlist-stat-card">
+          <div class="watchlist-stat-val text-gold"><i class="fa-solid fa-star"></i> 8.8</div>
+          <div class="watchlist-stat-label">Average Rating</div>
+        </div>
+      </section>
+
+      <!-- Watchlist Filter Tabs -->
+      <div class="watchlist-tabs">
+        <a href="favorites.html" class="watchlist-tab active"><i class="fa-solid fa-list-check"></i> All Saved <span class="tab-badge">4</span></a>
+        </div>
+
+      <!-- Saved Movies Grid (FR-07, FR-08) -->
+      <section class="movie-grid">
+        
+        <!-- Saved 1: Inception -->
+        <article class="movie-card">
+          <div class="movie-poster-box">
+            <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?w=800&auto=format&fit=crop&q=80" alt="Inception" loading="lazy">
+            <div class="card-rating-badge"><i class="fa-solid fa-star"></i> 8.8</div>
+            <div class="card-fav-badge active">
+              <i class="fa-solid fa-heart"></i>
+            </div>
+          </div>
+          <div class="movie-card-body">
+            <h3 class="movie-card-title"><a href="movie-details.html">Inception</a></h3>
+            <div class="movie-card-meta">
+              <span><i class="fa-regular fa-calendar"></i> 2010</span>
+              <span>•</span>
+              <span><i class="fa-regular fa-clock"></i> 2h 28m</span>
+              <span>•</span>
+              <span>English</span>
+            </div>
+            <div class="genre-tags">
+              <span class="genre-tag">Sci-Fi</span>
+              <span class="genre-tag">Action</span>
+              <span class="status-pill plan"><i class="fa-regular fa-bookmark"></i> Plan to Watch</span>
+            </div>
+            <p class="movie-card-desc">A thief who steals corporate secrets through dream-sharing technology is given the task of planting an idea.</p>
+            <div class="fav-card-actions">
+              <a href="movie-details.html" class="btn btn-primary btn-sm"><i class="fa-solid fa-circle-info"></i> Details</a>
+              <a href="movie-details.html#trailer" class="btn btn-gold btn-sm"><i class="fa-solid fa-play"></i> Trailer</a>
+              <a href="favorites.html" class="btn btn-danger-outline btn-sm" title="Remove from favorites"><i class="fa-solid fa-trash"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Saved 2: The Dark Knight -->
+        <article class="movie-card">
+          <div class="movie-poster-box">
+            <img src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=800&auto=format&fit=crop&q=80" alt="The Dark Knight" loading="lazy">
+            <div class="card-rating-badge"><i class="fa-solid fa-star"></i> 9.0</div>
+            <div class="card-fav-badge active">
+              <i class="fa-solid fa-heart"></i>
+            </div>
+          </div>
+          <div class="movie-card-body">
+            <h3 class="movie-card-title"><a href="movie-details.html">The Dark Knight</a></h3>
+            <div class="movie-card-meta">
+              <span><i class="fa-regular fa-calendar"></i> 2008</span>
+              <span>•</span>
+              <span><i class="fa-regular fa-clock"></i> 2h 32m</span>
+              <span>•</span>
+              <span>English</span>
+            </div>
+            <div class="genre-tags">
+              <span class="genre-tag">Action</span>
+              <span class="genre-tag">Crime</span>
+              <span class="status-pill watched"><i class="fa-solid fa-check"></i> Watched</span>
+            </div>
+            <p class="movie-card-desc">When the menace known as the Joker wreaks havoc and chaos on Gotham City, Batman must accept a test of justice.</p>
+            <div class="fav-card-actions">
+              <a href="movie-details.html" class="btn btn-primary btn-sm"><i class="fa-solid fa-circle-info"></i> Details</a>
+              <a href="movie-details.html#trailer" class="btn btn-gold btn-sm"><i class="fa-solid fa-play"></i> Trailer</a>
+              <a href="favorites.html" class="btn btn-danger-outline btn-sm" title="Remove from favorites"><i class="fa-solid fa-trash"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Saved 3: Interstellar -->
+        <article class="movie-card">
+          <div class="movie-poster-box">
+            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop&q=80" alt="Interstellar" loading="lazy">
+            <div class="card-rating-badge"><i class="fa-solid fa-star"></i> 8.7</div>
+            <div class="card-fav-badge active">
+              <i class="fa-solid fa-heart"></i>
+            </div>
+          </div>
+          <div class="movie-card-body">
+            <h3 class="movie-card-title"><a href="movie-details.html">Interstellar</a></h3>
+            <div class="movie-card-meta">
+              <span><i class="fa-regular fa-calendar"></i> 2014</span>
+              <span>•</span>
+              <span><i class="fa-regular fa-clock"></i> 2h 49m</span>
+              <span>•</span>
+              <span>English</span>
+            </div>
+            <div class="genre-tags">
+              <span class="genre-tag">Sci-Fi</span>
+              <span class="genre-tag">Adventure</span>
+              <span class="status-pill plan"><i class="fa-regular fa-bookmark"></i> Plan to Watch</span>
+            </div>
+            <p class="movie-card-desc">When Earth becomes uninhabitable, a team of explorers travel through a wormhole in space to ensure humanity's survival.</p>
+            <div class="fav-card-actions">
+              <a href="movie-details.html" class="btn btn-primary btn-sm"><i class="fa-solid fa-circle-info"></i> Details</a>
+              <a href="movie-details.html#trailer" class="btn btn-gold btn-sm"><i class="fa-solid fa-play"></i> Trailer</a>
+              <a href="favorites.html" class="btn btn-danger-outline btn-sm" title="Remove from favorites"><i class="fa-solid fa-trash"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Saved 4: Oppenheimer -->
+        <article class="movie-card">
+          <div class="movie-poster-box">
+            <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b675?w=800&auto=format&fit=crop&q=80" alt="Oppenheimer" loading="lazy">
+            <div class="card-rating-badge"><i class="fa-solid fa-star"></i> 8.9</div>
+            <div class="card-fav-badge active">
+              <i class="fa-solid fa-heart"></i>
+            </div>
+          </div>
+          <div class="movie-card-body">
+            <h3 class="movie-card-title"><a href="movie-details.html">Oppenheimer</a></h3>
+            <div class="movie-card-meta">
+              <span><i class="fa-regular fa-calendar"></i> 2023</span>
+              <span>•</span>
+              <span><i class="fa-regular fa-clock"></i> 3h 00m</span>
+              <span>•</span>
+              <span>English</span>
+            </div>
+            <div class="genre-tags">
+              <span class="genre-tag">Biography</span>
+              <span class="genre-tag">Drama</span>
+              <span class="status-pill watched"><i class="fa-solid fa-check"></i> Watched</span>
+            </div>
+            <p class="movie-card-desc">The story of American theoretical physicist J. Robert Oppenheimer and his role in the Manhattan Project during World War II.</p>
+            <div class="fav-card-actions">
+              <a href="movie-details.html" class="btn btn-primary btn-sm"><i class="fa-solid fa-circle-info"></i> Details</a>
+              <a href="movie-details.html#trailer" class="btn btn-gold btn-sm"><i class="fa-solid fa-play"></i> Trailer</a>
+              <a href="favorites.html" class="btn btn-danger-outline btn-sm" title="Remove from favorites"><i class="fa-solid fa-trash"></i></a>
+            </div>
+          </div>
+        </article>
+
+      </section>
+
+      <!-- Watchlist Organization Guide Box -->
+      <section class="watchlist-guide">
+        <h3><i class="fa-solid fa-lightbulb text-gold"></i> Watchlist Management &amp; Curation Guide</h3>
+        <div class="watchlist-guide-grid">
+          <div class="guide-step">
+            <div class="guide-step-icon"><i class="fa-solid fa-bookmark"></i></div>
+            <h4>1. Bookmark Any Title</h4>
+            <p>Click the heart icon on any movie card or detail page across the catalog to instantly pin it to your personal watchlist.</p>
+          </div>
+          <div class="guide-step">
+            <div class="guide-step-icon"><i class="fa-solid fa-layer-group"></i></div>
+            <h4>2. Filter by Watch Status</h4>
+            <p>Categorize titles between "Plan to Watch" and completed "Watched" to organize your upcoming movie marathon sessions.</p>
+          </div>
+          <div class="guide-step">
+            <div class="guide-step-icon"><i class="fa-solid fa-chart-pie"></i></div>
+            <h4>3. Track Cinema Stats</h4>
+            <p>Monitor your overall portfolio runtime, top favorite directors, and community rating averages at a glance.</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Semantic Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid footer-grid-3">
+        <div class="footer-col">
+          <div class="footer-brand">
+            <span class="brand-icon">
+              <i class="fa-solid fa-film"></i>
+            </span>
+            <h3>Cine<span class="text-red">Pulse</span></h3>
+          </div>
+          <p>
+            Movie Information Portal - Developed for Web Technology–I (2301CS363). Demonstrating static watchlist management and responsive CSS cards.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="movies.html">All Movies</a></li>
+            <li><a href="favorites.html">Favorites</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Department Info</h4>
+          <p><strong>Course:</strong> Web Technology–I (2301CS363)</p>
+          <p><strong>Department:</strong> Computer Engineering</p>
+          <p><strong>Institute:</strong> Darshan Institute of Engineering & Technology</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 CinePulse Movie Portal. Designed for Phase-1 Academic Evaluation.</div>
+        <div>Made with <i class="fa-solid fa-heart text-red"></i> by Computer Engineering Department</div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

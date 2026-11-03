@@ -1,0 +1,308 @@
+/* =======================================================
+   Movie Details Stylesheet (movie-details.html)
+   Subject: Web Technology-I (HTML5 & CSS3)
+   This file contains styles specific to the Movie Details page:
+   - Cinematic Details Hero Section
+   - Details Body Two-Column Grid
+   - Video Trailer Container
+   - Movie Cast & Crew List
+   - Mini Review Spotlight
+   - Recommended Films Cards
+   - Film Specifications
+   - Responsive Media Queries
+   ======================================================= */
+
+/* Details Hero */
+.details-hero {
+  min-height: 400px;
+  background-image: linear-gradient(to top, #0f1115 10%, rgba(15, 17, 21, 0.8) 70%),
+                    url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=1600&auto=format&fit=crop&q=80');
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  margin-bottom: 35px;
+  padding: 30px;
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.details-hero-layout {
+  display: flex;
+  align-items: flex-end;
+  gap: 30px;
+  width: 100%;
+}
+
+.details-poster-box {
+  width: 220px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 2px solid #2e3442;
+}
+
+.details-poster-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.details-hero-info {
+  flex-grow: 1;
+}
+
+.details-meta-tags {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.meta-chip {
+  background-color: #20242e;
+  border: 1px solid #2e3442;
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+.details-title {
+  font-size: 36px;
+  color: #ffffff;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.details-specs {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: #9ca3af;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.rating-badge-large {
+  background-color: #f5c518;
+  color: #111111;
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.details-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Two-Column Details Body */
+.details-body-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.details-body-grid .card-box {
+  margin-bottom: 25px;
+}
+
+.details-body-grid .card-box h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.details-body-grid .card-box p {
+  color: #9ca3af;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.details-body-grid .card-box p:last-child {
+  margin-bottom: 0;
+}
+
+/* Cast Box */
+.cast-item {
+  margin-bottom: 12px;
+}
+
+.cast-label {
+  font-size: 12px;
+  color: #9ca3af;
+  text-transform: uppercase;
+  margin-bottom: 3px;
+}
+
+.cast-names {
+  font-size: 15px;
+  font-weight: bold;
+  color: #f3f4f6;
+  line-height: 1.5;
+}
+
+/* Mini Review Quote Spotlight */
+.mini-review-box {
+  background-color: #20242e;
+  border-left: 3px solid #f5c518;
+  border-radius: 6px;
+  padding: 14px 18px;
+  margin-top: 15px;
+}
+
+.mini-review-text {
+  font-style: italic;
+  color: #d1d5db;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.mini-review-author {
+  font-size: 13px;
+  font-weight: bold;
+  color: #f5c518;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mini-review-footer {
+  margin-top: 15px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* 16:9 Video Trailer Container */
+.trailer-video-box {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #2e3442;
+  margin-bottom: 12px;
+  background-color: #000000;
+}
+
+.trailer-video-box iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Recommended Similar Films Cards */
+.rec-movies-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 15px;
+  width: 100%;
+}
+
+.rec-movie-card {
+  background-color: #20242e;
+  border: 1px solid #2e3442;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.rec-movie-card:hover {
+  border-color: #e50914;
+}
+
+.rec-poster {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+}
+
+.rec-body {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.rec-title {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rec-title a {
+  color: #ffffff;
+}
+
+.rec-title a:hover {
+  color: #f5c518;
+}
+
+.rec-meta {
+  font-size: 12px;
+  color: #9ca3af;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 992px) {
+  .details-body-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .details-hero-layout {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+  .details-specs {
+    justify-content: center;
+  }
+  .details-actions {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .details-hero {
+    min-height: auto;
+    padding: 20px 15px;
+  }
+  .details-title {
+    font-size: 24px;
+  }
+  .details-poster-box {
+    width: 180px;
+    max-width: 100%;
+  }
+  .details-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+  .details-actions .btn {
+    width: 100%;
+  }
+  .rec-movies-grid {
+    grid-template-columns: 1fr;
+  }
+}

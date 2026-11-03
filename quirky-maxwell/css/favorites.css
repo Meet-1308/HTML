@@ -1,0 +1,199 @@
+/* =======================================================
+   Watchlist & Favorites Stylesheet (favorites.html)
+   Subject: Web Technology-I (HTML5 & CSS3)
+   This file contains styles specific to the Favorites page:
+   - Header Toolbar
+   - Watchlist Metrics Summary Grid
+   - Watchlist Filter Tabs
+   - Saved Movie Cards Actions
+   - Watchlist Organization Guide Box
+   - Responsive Media Queries
+   ======================================================= */
+
+/* Favorites Header */
+.favorites-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+  gap: 15px;
+  width: 100%;
+}
+
+/* Watchlist Stats Grid */
+.watchlist-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 25px;
+  width: 100%;
+}
+
+.watchlist-stat-card {
+  background-color: #171a21;
+  border: 1px solid #2e3442;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+}
+
+.watchlist-stat-val {
+  font-size: 32px;
+  font-weight: bold;
+  color: #f5c518;
+  margin-bottom: 5px;
+}
+
+.watchlist-stat-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #9ca3af;
+  text-transform: uppercase;
+}
+
+/* Watchlist Status Filter Tabs */
+.watchlist-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #2e3442;
+  padding-bottom: 15px;
+  width: 100%;
+}
+
+.watchlist-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background-color: #171a21;
+  border: 1px solid #2e3442;
+  border-radius: 20px;
+  color: #9ca3af;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.watchlist-tab:hover {
+  color: #ffffff;
+  border-color: #e50914;
+}
+
+.watchlist-tab.active {
+  background-color: #e50914;
+  border-color: #e50914;
+  color: #ffffff;
+}
+
+.tab-badge {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+}
+
+/* Card Actions */
+.fav-card-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: auto;
+  flex-wrap: wrap;
+}
+
+.fav-card-actions .btn-primary {
+  flex-grow: 1;
+}
+
+/* Watchlist Organization Guide Box */
+.watchlist-guide {
+  background-color: #171a21;
+  border: 1px solid #2e3442;
+  border-radius: 10px;
+  padding: 25px;
+  margin-top: 40px;
+  width: 100%;
+}
+
+.watchlist-guide h3 {
+  font-size: 18px;
+  color: #ffffff;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.watchlist-guide-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+.guide-step {
+  background-color: #20242e;
+  border: 1px solid #2e3442;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.guide-step-icon {
+  font-size: 22px;
+  color: #f5c518;
+  margin-bottom: 10px;
+}
+
+.guide-step h4 {
+  font-size: 15px;
+  margin-bottom: 6px;
+  color: #ffffff;
+}
+
+.guide-step p {
+  font-size: 13px;
+  color: #9ca3af;
+  line-height: 1.5;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 992px) {
+  .watchlist-guide-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .watchlist-stats-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .favorites-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .favorites-header .btn {
+    width: 100%;
+  }
+  .watchlist-tabs {
+    gap: 8px;
+  }
+  .watchlist-tab {
+    font-size: 13px;
+    padding: 6px 12px;
+  }
+  .fav-card-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .fav-card-actions .btn {
+    width: 100%;
+  }
+}

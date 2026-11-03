@@ -1,0 +1,169 @@
+/* =======================================================
+   Reviews & Ratings Stylesheet (reviews.html)
+   Subject: Web Technology-I (HTML5 & CSS3)
+   This file contains styles specific to the Reviews page:
+   - Two-Column Page Grid (Review Form & Community Feed)
+   - Community Review Cards
+   - User Avatars & Star Ratings
+   - Scoring Guidelines & Scale Legend
+   - Responsive Media Queries
+   ======================================================= */
+
+/* Two-Column Page Grid */
+.reviews-layout-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 30px;
+  margin-top: 20px;
+  width: 100%;
+  align-items: start;
+}
+
+.reviews-layout-grid > div:first-child {
+  position: sticky;
+  top: 90px;
+}
+
+.reviews-layout-grid .card-box {
+  margin-bottom: 0;
+}
+
+.reviews-layout-grid .card-box h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.reviews-layout-grid .card-box p {
+  color: #9ca3af;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Reviews Feed Header */
+.reviews-feed-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Review Card Item */
+.review-card-item {
+  background-color: #171a21;
+  border: 1px solid #2e3442;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.review-card-item:hover {
+  border-color: rgba(245, 197, 24, 0.4);
+}
+
+.review-header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.review-user-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-avatar-badge {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #4f46e5;
+  color: #ffffff;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  flex-shrink: 0;
+}
+
+.avatar-green {
+  background-color: #10b981;
+}
+
+.avatar-orange {
+  background-color: #f59e0b;
+}
+
+.avatar-pink {
+  background-color: #ec4899;
+}
+
+.avatar-blue {
+  background-color: #3b82f6;
+}
+
+.user-meta-name {
+  font-weight: bold;
+  color: #f3f4f6;
+  font-size: 15px;
+}
+
+.movie-reviewed-tag {
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+.movie-reviewed-tag a {
+  color: #f5c518;
+  font-weight: 600;
+}
+
+.rating-badge-pill {
+  background-color: rgba(245, 197, 24, 0.15);
+  color: #f5c518;
+  border: 1px solid rgba(245, 197, 24, 0.3);
+  font-weight: bold;
+  font-size: 13px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.stars-rendered {
+  color: #f5c518;
+  font-size: 13px;
+  margin-top: 4px;
+  text-align: right;
+}
+
+.review-body-text {
+  color: #9ca3af;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+
+/* Responsive Media Queries */
+@media (max-width: 992px) {
+  .reviews-layout-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+}
+
+@media (max-width: 600px) {
+  .review-header-flex {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .stars-rendered {
+    text-align: left;
+  }
+  .review-user-group {
+    gap: 10px;
+  }
+}

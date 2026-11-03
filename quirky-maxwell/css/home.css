@@ -1,0 +1,311 @@
+/* =======================================================
+   Home Page Stylesheet (index.html)
+   Subject: Web Technology-I (HTML5 & CSS3)
+   This file contains styles specific to the Home page:
+   - Hero Banner Section
+   - Statistics Counter Grid
+   - Genre Cards Grid
+   - Top 5 Ranked Leaderboard Rows
+   - Call to Action Box
+   - Responsive Media Queries
+   ======================================================= */
+
+/* Hero Banner */
+.hero-banner {
+  min-height: 440px;
+  background-image: linear-gradient(to right, rgba(15, 17, 21, 0.95), rgba(15, 17, 21, 0.6)),
+                    url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=1600&auto=format&fit=crop&q=80');
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  width: 100%;
+}
+
+.hero-content {
+  max-width: 800px;
+  padding: 40px;
+}
+
+.hero-badge {
+  display: inline-block;
+  background-color: #e50914;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+}
+
+.hero-title {
+  font-size: 38px;
+  color: #ffffff;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.hero-meta {
+  display: flex;
+  gap: 15px;
+  font-size: 15px;
+  color: #d1d5db;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.hero-desc {
+  font-size: 15px;
+  color: #e5e7eb;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* Top 5 Ranked Leaderboard */
+.ranking-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.ranking-item {
+  display: flex;
+  align-items: center;
+  background-color: #171a21;
+  border: 1px solid #2e3442;
+  border-radius: 8px;
+  padding: 14px 20px;
+  gap: 20px;
+}
+
+.ranking-item:hover {
+  border-color: #e50914;
+}
+
+.rank-badge {
+  font-size: 24px;
+  font-weight: bold;
+  color: #f5c518;
+  width: 42px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.ranking-item:nth-child(1) .rank-badge {
+  color: #f5c518;
+}
+
+.ranking-item:nth-child(2) .rank-badge {
+  color: #d1d5db;
+}
+
+.ranking-item:nth-child(3) .rank-badge {
+  color: #f97316;
+}
+
+.ranking-item:nth-child(4) .rank-badge,
+.ranking-item:nth-child(5) .rank-badge {
+  color: #9ca3af;
+}
+
+.rank-thumb {
+  width: 58px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 6px;
+  flex-shrink: 0;
+  border: 1px solid #2e3442;
+}
+
+.rank-details {
+  flex-grow: 1;
+  min-width: 0;
+}
+
+.rank-title {
+  font-size: 17px;
+  font-weight: bold;
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rank-title a {
+  color: #ffffff;
+}
+
+.rank-title a:hover {
+  color: #f5c518;
+}
+
+.rank-meta {
+  font-size: 13px;
+  color: #9ca3af;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.rank-rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #f5c518;
+  background-color: #20242e;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid #2e3442;
+  flex-shrink: 0;
+}
+
+.rank-action {
+  flex-shrink: 0;
+}
+
+/* Call to Action Box */
+.cta-box {
+  background-color: #171a21;
+  border: 1px solid #2e3442;
+  border-radius: 12px;
+  padding: 40px 20px;
+  text-align: center;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.cta-box h2 {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.cta-box p {
+  color: #9ca3af;
+  max-width: 700px;
+  margin: 0 auto 25px auto;
+  font-size: 15px;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .hero-banner {
+    min-height: 380px;
+  }
+  .hero-title {
+    font-size: 30px;
+  }
+  .ranking-item {
+    gap: 14px;
+    padding: 12px 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ranking-item {
+    gap: 12px;
+    padding: 10px 12px;
+  }
+  .rank-badge {
+    font-size: 20px;
+    width: 32px;
+  }
+  .rank-thumb {
+    width: 48px;
+    height: 60px;
+  }
+  .rank-title {
+    font-size: 15px;
+  }
+  .rank-rating {
+    font-size: 13px;
+    padding: 4px 8px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-banner {
+    min-height: auto;
+    padding: 20px 0;
+  }
+  .hero-content {
+    padding: 20px 15px;
+    max-width: 100%;
+  }
+  .hero-title {
+    font-size: 24px;
+  }
+  .hero-meta {
+    font-size: 13px;
+    gap: 8px;
+  }
+  .hero-desc {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+  .hero-actions .btn {
+    width: 100%;
+  }
+  .ranking-item {
+    flex-wrap: wrap;
+    padding: 12px;
+    gap: 10px;
+  }
+  .rank-badge {
+    font-size: 18px;
+    width: auto;
+  }
+  .rank-details {
+    width: calc(100% - 95px);
+  }
+  .rank-rating {
+    margin-left: 0;
+  }
+  .rank-action {
+    width: 100%;
+  }
+  .rank-action .btn {
+    width: 100%;
+  }
+  .cta-box {
+    padding: 25px 15px;
+  }
+  .cta-box h2 {
+    font-size: 22px;
+  }
+  .cta-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+  .cta-buttons .btn {
+    width: 100%;
+  }
+}
